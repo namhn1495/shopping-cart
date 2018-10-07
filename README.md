@@ -2,7 +2,7 @@
 # Shopping Cart
 This is my home-test when interviewing the backend position at tiki.vn
 
-The point of this exercise is the `Promotion` function. Requires the ability to add new rules without affecting the `cart` and its information. To do that, I created an interface `IPromotion`.
+The point of this exercise is the `Promotion` function. Requires the ability to add new rules without affecting the `cart` and its information. To do that, I created an interface `IPromotion`. Initially, I was going to do this with the `Chain of Responsibility` pattern, but it was not really necessary in this test, so I made it as simple as possible.
 ```java
 public interface IPromotion {
   /**
@@ -34,6 +34,8 @@ And this is one of its implementations
     return totalDiscountedPrice > this.subTotal ? discount : 0;
   }
 ```
+ 
+This project follows the S.O.L.I.D principle except for the User class, it's not abstraction because I want to simplify this section.
 
 See details in  [src/main/java](https://github.com/namhn1495/shopping-cart/tree/master/src/main/java/vn/com/loda)
 # Test
